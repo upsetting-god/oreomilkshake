@@ -1,2 +1,2 @@
 # oreomilkshake
-wassup guys!
+yoo guys, this my website
