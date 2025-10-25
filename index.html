@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>yoo guys</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+      color: white;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('back.png');
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card {
+      background: rgba(30, 30, 30, 0.85);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+      backdrop-filter: blur(4px);
+      position: relative;
+      animation: rgbGlow 8s infinite alternate;
+    }
+
+    @keyframes rgbGlow {
+      0%   { box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); }
+      25%  { box-shadow: 0 0 15px rgba(255, 165, 0, 0.8); }
+      50%  { box-shadow: 0 0 15px rgba(0, 255, 0, 0.8); }
+      75%  { box-shadow: 0 0 15px rgba(0, 100, 255, 0.8); }
+      100% { box-shadow: 0 0 15px rgba(128, 0, 255, 0.8); }
+    }
+
+    @keyframes textGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #d8b4fe, #c084fc, #a855f7, #9333ea, #7e22ce, #6b21a8);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textGradient 4s ease infinite;
+      display: inline-block;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .roles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .role-tag {
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: white;
+      background: linear-gradient(90deg, #8a2be2, #9400d3, #8a2be2);
+      background-size: 300% 300%;
+      animation: gradientShift 3s ease infinite;
+      display: inline-block;
+      text-align: center;
+      min-width: 120px;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Friends block */
+    .friends {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .friends h2 {
+      align-self: stretch;
+      text-align: center;
+    }
+
+    .friends a {
+      padding: 10px 20px;
+      background: #444;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+      width: fit-content;
+      text-align: center;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .friends a:hover {
+      background: #555;
+      transform: scale(1.03);
+    }
+
+    /* Price list */
+    .price-list ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .price-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #444;
+    }
+
+    .price-list li:last-child {
+      border-bottom: none;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price-item span {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <!-- About me -->
+    <div class="card">
+      <h2><span class="gradient-text">About me</span></h2>
+      <div class="roles">
+        <span class="role-tag">System Developer</span>
+        <span class="role-tag">Pentester</span>
+        <span class="role-tag">Programmer</span>
+      </div>
+      <p>
+        <span class="gradient-text">
+          Even after all this time, I'm glad to see you.<br><br>
+          We are all just molecules in a vast world of control.
+        </span>
+      </p>
+    </div>
+
+    <!-- Friends -->
+    <div class="card friends">
+      <h2><span class="gradient-text">Friends and partners</span></h2>
+      <a href="https://t.me/ipklonix" target="_blank"><span class="gradient-text">fuck \ manager</span></a>
+      <a href="https://t.me/munet" target="_blank"><span class="gradient-text">солана факер \ friend</span></a>
+      <a href="https://t.me/shitromantic" target="_blank"><span class="gradient-text">Матве малышка \ friend</span></a>
+      <a href="https://t.me/namehikka" target="_blank"><span class="gradient-text">Рома Хикканский \ friend</span></a>
+      <a href="https://t.me/attackoazov" target="_blank"><span class="gradient-text">Оазов \ friend</span></a>
+      <a href="https://t.me/Stepn1kovs" target="_blank"><span class="gradient-text">Stepn1kov \ friend</span></a>
+    </div>
+
+    <!-- Price -->
+    <div class="card price-list">
+      <h2><span class="gradient-text">Price List</span></h2>
+      <ul>
+        <li>
+          <div class="price-item">
+            <span class="gradient-text">System Software</span>
+            <span class="gradient-text">from $3 / от 300 ₽</span>
+          </div>
+        </li>
+        <li>
+          <div class="price-item">
+            <span class="gradient-text">Telegram Bot</span>
+            <span class="gradient-text">from $2 / от 200 ₽</span>
+          </div>
+        </li>
+        <li>
+          <div class="price-item">
+            <span class="gradient-text">Data protection consultation</span>
+            <span class="gradient-text">$5 / 500 ₽</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
